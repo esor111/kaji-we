@@ -1,0 +1,315 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  overflow: hidden;
+}
+
+/* Background Container */
+.background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Fallback Image */
+.bgImage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 1s ease;
+}
+
+.bgImage.hidden {
+  opacity: 0;
+}
+
+/* Video Background */
+.bgVideo {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+}
+
+.bgVideo.visible {
+  opacity: 1;
+}
+
+/* Main Gradient Overlay - Diagonal Blue */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 31, 113, 0.3) 0%,
+    rgba(26, 31, 113, 0.5) 30%,
+    rgba(26, 31, 113, 0.95) 60%,
+    rgba(26, 31, 113, 0.98) 100%
+  );
+}
+
+/* Vignette Effect for Depth */
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+/* Content Area */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-10) 0;
+  max-width: 650px;
+  margin-left: auto;
+  color: var(--color-white);
+}
+
+/* Label with Icon */
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: var(--space-4);
+  color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.labelIcon {
+  color: #ffc107;
+  font-size: var(--text-lg);
+}
+
+/* Main Title */
+.title {
+  font-size: var(--text-3xl);
+  line-height: 1.1;
+  margin-bottom: var(--space-6);
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 0.8s ease 0.1s forwards;
+  opacity: 0;
+}
+
+/* Description */
+.description {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+  opacity: 0;
+  color: rgba(255, 255, 255, 0.9);
+  animation: fadeInUp 0.8s ease 0.2s forwards;
+}
+
+/* Features List */
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.3s forwards;
+}
+
+.features li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-base);
+  font-weight: var(--font-medium);
+}
+
+.checkIcon {
+  display: flex;
+  color: #4ade80;
+  filter: drop-shadow(0 0 8px rgba(74, 222, 128, 0.4));
+}
+
+/* Reviews Badge */
+.reviews {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  margin-bottom: var(--space-8);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.4s forwards;
+  width: fit-content;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 3px solid var(--color-white);
+  margin-left: -12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.avatars img:first-child {
+  margin-left: 0;
+}
+
+.avatars img:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.avatarMore {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-primary-red);
+  color: white;
+  font-weight: var(--font-bold);
+  margin-left: -12px;
+  border: 3px solid var(--color-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.reviewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+  color: #ffc107;
+  filter: drop-shadow(0 0 4px rgba(255, 193, 7, 0.5));
+}
+
+.reviewInfo span {
+  font-size: var(--text-sm);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.5px;
+}
+
+/* CTA Buttons */
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  opacity: 0;
+  animation: fadeInUp 0.8s ease 0.5s forwards;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .hero {
+    padding-top: 90px;
+  }
+
+  .title {
+    font-size: var(--text-4xl);
+  }
+
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-6);
+  }
+
+  .overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(26, 31, 113, 0.2) 0%,
+      rgba(26, 31, 113, 0.4) 35%,
+      rgba(26, 31, 113, 0.92) 55%,
+      rgba(26, 31, 113, 0.98) 100%
+    );
+  }
+}
+
+@media (min-width: 1200px) {
+  .overlay {
+    background: linear-gradient(
+      125deg,
+      transparent 0%,
+      rgba(26, 31, 113, 0.3) 25%,
+      rgba(26, 31, 113, 0.85) 45%,
+      rgba(26, 31, 113, 0.95) 60%,
+      rgba(26, 31, 113, 0.98) 100%
+    );
+  }
+
+  .title {
+    font-size: var(--text-5xl);
+  }
+
+  .content {
+    padding: var(--space-16) 0;
+  }
+
+  .reviews {
+    padding: var(--space-5) var(--space-6);
+  }
+
+  .avatars img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .avatarMore {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1600px) {
+  .content {
+    max-width: 700px;
+  }
+
+  .title {
+    font-size: var(--text-6xl);
+  }
+
+  .description {
+    font-size: var(--text-xl);
+  }
+}

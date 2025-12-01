@@ -1,0 +1,182 @@
+<!-- HTML for static distribution bundle build --><!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <title>Upmenu API documentation</title>
+    <link rel="icon" type="image/png" href="https://am.cdn-upm.com/media/favicon.ico" sizes="16x16">
+    <link href="css/css.css" rel="stylesheet">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        .swagger-ui header.topbar {
+            background: transparent;
+        }
+
+        .swagger-ui .topbar a {
+            color: #000;
+        }
+
+        .swagger-ui .link:focus {
+            outline: none;
+        }
+
+        .swagger-ui .topbar a img {
+            height: 50%;
+        }
+
+        .upmenu-logo {
+            max-width: 400px !important;
+        }
+
+        /*sc-elJkPf - Powered by Redoc container*/
+        .setAuth, .sc-elJkPf {
+            display: none !important;
+        }
+
+        .tryBtn {
+            border-radius: 5px;
+            padding: 5px 10px;
+            line-height: 20px;
+            min-width: 55px;
+            border: none;
+            color: #fff;
+            background: #9b3d9a;
+            background: -moz-linear-gradient(left, #9b3d9a 0%, #8b38cb 100%);
+            background: -webkit-linear-gradient(left, #9b3d9a 0%, #8b38cb 100%);
+            background: linear-gradient(to right, #9b3d9a 0%, #8b38cb 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#9b3d9a', endColorstr='#8b38cb', GradientType=1);
+        }
+
+        .tryBtn + span[type="post"] {
+            border-radius: 5px;
+            padding: 5px 10px;
+            line-height: 20px;
+            border: none;
+            color: #fff;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="swagger-ui">
+    <header class="topbar">
+        <a href="index.html" class="link">
+            <img class="upmenu-logo" src="images/logo_upmenu_api.png" alt="Upmenu | API documentation">
+        </a>
+    </header>
+</div>
+
+<div id="redoc-container"></div>
+<div id="_changelog_content" style="display: none">
+    <table>
+        <tbody><tr>
+            <th>Date</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>23.10.2025</td>
+            <td>externalDeliveryHumanFriendlyId parameter added to 'Receiving orders (Webhook)'.</td>
+        </tr>
+        <tr>
+            <td>22.09.2025</td>
+            <td>Deposits added to Receiving orders (Webhook)</td>
+        </tr>
+        <tr>
+            <td>23.02.2025</td>
+            <td>Accept Order deliveryProvider parameter added</td>
+        </tr>
+        <tr>
+            <td>22.11.2024</td>
+            <td>Update products availability API added</td>
+        </tr>
+        <tr>
+            <td>30.08.2024</td>
+            <td>pickupDate parameter added to 'Receiving orders (Webhook)'. <br>lastPickupTime added to 'Update Delivery Time (Webhook)'</td>
+        </tr>
+        <tr>
+            <td>02.07.2024</td>
+            <td>Update delivery time Webhook added</td>
+        </tr>
+        <tr>
+            <td>13.03.2024</td>
+            <td>Online orders settings API added</td>
+        </tr>
+        <tr>
+            <td>24.01.2024</td>
+            <td>Single choice added to update menu product addon model</td>
+        </tr>
+        <tr>
+            <td>19.12.2022</td>
+            <td>URL for Test Rest API updated in documentation  </td>
+        </tr>
+        <tr>
+            <td>11.03.2022</td>
+            <td>Receiving Orders Api - add option to return orderId as random alphanumeric string</td>
+        </tr>
+        <tr>
+            <td>08.09.2021</td>
+            <td>Menu update - change properties name for disabling product addon (from disabled to disable)</td>
+        </tr>
+        <tr>
+            <td>23.08.2021</td>
+            <td>Receiving Orders Api - add group name field to order line item</td>
+        </tr>
+        <tr>
+            <td>29.07.2021</td>
+            <td>Add coupons to pos order api </td>
+        </tr>
+        <tr>
+            <td>14.07.2021</td>
+            <td>Update information about mapping promotions in Receiving Orders API</td>
+        </tr>
+        <tr>
+            <td>14.07.2021</td>
+            <td>Receiving Orders Api - extends object with newsletter email and sms confirmation</td>
+        </tr>
+        <tr>
+            <td>21.06.2021</td>
+            <td>Add tableorder to pos order api </td>
+        </tr>
+    </tbody></table>
+</div>
+
+
+
+<script src="js/redoc.standalone.min.js"></script>
+<script src="js/redoc_try.js"></script>
+<script>
+    initTry({
+        openApi: `v3/api-docs?group=UpMenu%20API`, // openApi address
+        tryText: `Try it`,
+        trySwaggerInApi: true,
+        redocOptions: [null, {
+            enableConsole: true,
+            hideDownloadButton: true,
+            expandResponses: "all"
+        }, null, function () {
+            jQuery("#_changelog").html(jQuery("#_changelog_content").show().html());
+            jQuery("#_changelog").show();
+            jQuery("#_changelog_content").hide();
+        }]
+    });
+
+
+</script>
+
+
+</body></html>

@@ -1,0 +1,14 @@
+export { default as Hero } from './Hero/Hero';
+export { default as Services } from './Services/Services';
+export { default as Process } from './Process/Process';
+export { default as Reviews } from './Reviews/Reviews';
+export { default as Partnerships } from './Partnerships/Partnerships';
+export { default as HonestService } from './HonestService/HonestService';
+export { default as About } from './About/About';
+export { default as ProudMembers } from './ProudMembers/ProudMembers';
+export { default as ServiceAreas } from './ServiceAreas/ServiceAreas';
+export { default as Offers } from './Offers/Offers';
+export { default as Trusted } from './Trusted/Trusted';
+export { default as FAQ } from './FAQ/FAQ';
+export { default as Blog } from './Blog/Blog';
+export { default as Contact } from './Contact/Contact';

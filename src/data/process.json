@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "step": 1,
+    "title": "Contact Our Team",
+    "description": "Give us a call or fill out our online form to get started. Our friendly team is ready to help with your plumbing, heating, or cooling needs.",
+    "icon": "phone"
+  },
+  {
+    "id": 2,
+    "step": 2,
+    "title": "Schedule Your Estimate or Repair",
+    "description": "We'll work with your schedule to find a convenient time for our technician to visit your home and assess the situation.",
+    "icon": "calendar"
+  },
+  {
+    "id": 3,
+    "step": 3,
+    "title": "Review Your Estimate",
+    "description": "Our technician will provide a detailed, upfront estimate before any work begins. No surprises, no hidden fees.",
+    "icon": "clipboard"
+  },
+  {
+    "id": 4,
+    "step": 4,
+    "title": "Problem Solved!",
+    "description": "Once you approve the estimate, we'll get to work and have your system running smoothly in no time.",
+    "icon": "check"
+  }
+]

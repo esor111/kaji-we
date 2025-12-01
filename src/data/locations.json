@@ -1,0 +1,35 @@
+{
+  "offices": [
+    {
+      "id": "springfield",
+      "name": "Springfield",
+      "address": "Springfield, MO",
+      "phone": "(417) 441-3517",
+      "email": "info@lorenzphac.com"
+    },
+    {
+      "id": "branson",
+      "name": "Branson",
+      "address": "Branson, MO",
+      "phone": "(417) 441-3517",
+      "email": "info@lorenzphac.com"
+    }
+  ],
+  "serviceAreas": [
+    "Springfield",
+    "Branson",
+    "Nixa",
+    "Ozark",
+    "Rogersville",
+    "Republic",
+    "Willard",
+    "Strafford",
+    "Battlefield",
+    "Clever",
+    "Fremont Hills",
+    "Hollister",
+    "Kimberling City",
+    "Forsyth",
+    "Reeds Spring"
+  ]
+}

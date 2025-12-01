@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "question": "What services does Lorenz Plumbing Heating & Air offer?",
+    "answer": "We provide a complete range of plumbing, heating, and air conditioning services including repairs, maintenance, and installations. Our services cover everything from fixing leaky faucets to installing new HVAC systems, sewer line repairs, water heater services, and more."
+  },
+  {
+    "id": 2,
+    "question": "Do you offer financing options?",
+    "answer": "Yes! We understand that home repairs and installations can be a significant investment. We offer flexible financing options to help make your home comfort needs more affordable. Contact us to learn more about our current financing programs."
+  },
+  {
+    "id": 3,
+    "question": "How do I schedule an appointment?",
+    "answer": "Scheduling is easy! You can call us directly at (417) 441-3517, use our online booking form, or request a callback. We offer flexible scheduling including same-day service for emergencies."
+  },
+  {
+    "id": 4,
+    "question": "Why should I trust Lorenz?",
+    "answer": "With over 45 years of experience serving Springfield, MO and surrounding areas, Lorenz has built a reputation for honest, reliable service. We're a family-owned business with certified technicians, transparent pricing, and a commitment to customer satisfaction backed by hundreds of 5-star reviews."
+  }
+]

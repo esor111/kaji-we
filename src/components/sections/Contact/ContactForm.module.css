@@ -1,0 +1,85 @@
+.form {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-xl);
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.progressStep {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-600);
+  font-family: var(--font-heading);
+  font-weight: var(--font-bold);
+  transition: all var(--transition-base);
+}
+
+.progressStep.active {
+  background-color: var(--color-primary-blue);
+  color: var(--color-white);
+}
+
+.step {
+  text-align: center;
+}
+
+.step h3 {
+  font-size: var(--text-xl);
+  color: var(--color-primary-blue);
+  margin-bottom: var(--space-2);
+}
+
+.step p {
+  color: var(--color-gray-600);
+  margin-bottom: var(--space-6);
+}
+
+.input,
+.select {
+  width: 100%;
+  padding: var(--space-4);
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  margin-bottom: var(--space-4);
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: var(--color-primary-blue);
+}
+
+.buttons {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.btn {
+  flex: 1;
+}
+
+.badges {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--color-gray-200);
+  color: var(--color-gray-600);
+  font-size: var(--text-sm);
+}

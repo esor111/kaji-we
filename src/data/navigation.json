@@ -1,0 +1,76 @@
+{
+  "logo": {
+    "src": "/images/lorenz-logo.svg",
+    "alt": "Lorenz Plumbing Heating & Air"
+  },
+  "phone": "(417) 441-3517",
+  "mainNav": [
+    {
+      "label": "Services",
+      "href": "/services",
+      "children": [
+        {
+          "category": "Plumbing",
+          "items": [
+            { "label": "Plumbing Repair", "href": "/plumbing-repair" },
+            { "label": "Plumbing Installation", "href": "/plumbing-installation" },
+            { "label": "Water Softener Replacement", "href": "/water-softener-replacement" }
+          ]
+        },
+        {
+          "category": "Heating",
+          "items": [
+            { "label": "Furnace Repair", "href": "/furnace-repair" },
+            { "label": "Furnace Maintenance", "href": "/furnace-maintenance" },
+            { "label": "Furnace Replacement", "href": "/furnace-replacement" },
+            { "label": "Heating System Installation", "href": "/heating-system-installation" }
+          ]
+        },
+        {
+          "category": "Air Conditioning",
+          "items": [
+            { "label": "AC Repair", "href": "/ac-repair" },
+            { "label": "AC Maintenance", "href": "/ac-maintenance" },
+            { "label": "AC Replacement", "href": "/ac-replacement" },
+            { "label": "Ductless Systems", "href": "/ductless-systems" }
+          ]
+        },
+        {
+          "category": "Sewer & Drain",
+          "items": [
+            { "label": "Sewer Line Repair", "href": "/sewer-line-repair" }
+          ]
+        },
+        {
+          "category": "Additional Services",
+          "items": [
+            { "label": "Controls & Thermostats", "href": "/controls-thermostats" },
+            { "label": "Additional Services", "href": "/additional-services" }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "About Us",
+      "href": "/about",
+      "children": [
+        { "label": "About Lorenz", "href": "/about" },
+        { "label": "Meet the Team", "href": "/meet-the-team" },
+        { "label": "Reviews", "href": "/reviews" },
+        { "label": "Partners", "href": "/partners" }
+      ]
+    },
+    {
+      "label": "Resources",
+      "href": "/resources",
+      "children": [
+        { "label": "FAQ", "href": "/faq" },
+        { "label": "Blog", "href": "/blog" }
+      ]
+    },
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ]
+}

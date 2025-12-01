@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Gregory G",
+    "text": "I scheduled Lorenz to come help me with a plumbing issue. They were prompt, professional, and fixed the problem quickly. Highly recommend!",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-1.webp"
+  },
+  {
+    "id": 2,
+    "name": "Sarah M",
+    "text": "Excellent service from start to finish. The technician was knowledgeable and explained everything clearly. Will definitely use again.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-2.webp"
+  },
+  {
+    "id": 3,
+    "name": "Michael R",
+    "text": "Lorenz installed our new HVAC system and did an amazing job. Fair pricing and quality workmanship. Thank you!",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-3.webp"
+  },
+  {
+    "id": 4,
+    "name": "Jennifer L",
+    "text": "Called for an emergency plumbing repair and they came out the same day. Professional, courteous, and reasonably priced.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-4.webp"
+  },
+  {
+    "id": 5,
+    "name": "David K",
+    "text": "We've used Lorenz for years and they never disappoint. Trustworthy and reliable service every time.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-5.webp"
+  },
+  {
+    "id": 6,
+    "name": "Amanda T",
+    "text": "Great experience with furnace maintenance. The tech was thorough and gave helpful tips for keeping our system running efficiently.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-6.webp"
+  },
+  {
+    "id": 7,
+    "name": "Robert H",
+    "text": "Lorenz replaced our old AC unit and the difference is incredible. Professional installation and great follow-up service.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-7.webp"
+  },
+  {
+    "id": 8,
+    "name": "Lisa P",
+    "text": "Friendly staff and excellent technicians. They fixed our water heater issue quickly and at a fair price.",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-8.webp"
+  },
+  {
+    "id": 9,
+    "name": "Chris W",
+    "text": "Top-notch service! From scheduling to completion, everything was smooth and professional. Highly recommend Lorenz!",
+    "rating": 5,
+    "source": "google",
+    "avatar": "/images/reviews/avatar-9.webp"
+  }
+]

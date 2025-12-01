@@ -1,0 +1,42 @@
+[
+  {
+    "id": "plumbing",
+    "title": "Plumbing",
+    "description": "Reliable plumbing service for your home or business. From repairs to installations, we handle it all.",
+    "icon": "plumbing",
+    "image": "/images/services/plumbing.webp",
+    "link": "/plumbing"
+  },
+  {
+    "id": "heating",
+    "title": "Heating",
+    "description": "Keep your home warm and comfortable with our expert heating services and furnace solutions.",
+    "icon": "heating",
+    "image": "/images/services/heating.webp",
+    "link": "/heating"
+  },
+  {
+    "id": "air-conditioning",
+    "title": "Air Conditioning",
+    "description": "Stay cool all summer long with our professional AC repair, maintenance, and installation services.",
+    "icon": "ac",
+    "image": "/images/services/air-conditioning.webp",
+    "link": "/air-conditioning"
+  },
+  {
+    "id": "sewer-drain",
+    "title": "Sewer and Drain",
+    "description": "Expert sewer and drain services to keep your plumbing system flowing smoothly.",
+    "icon": "sewer",
+    "image": "/images/services/sewer-drain.webp",
+    "link": "/sewer-drain"
+  },
+  {
+    "id": "additional",
+    "title": "Additional Services",
+    "description": "From thermostats to water heaters, we offer a full range of home comfort solutions.",
+    "icon": "additional",
+    "image": "/images/services/additional.webp",
+    "link": "/additional-services"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "How to Unclog a Sink: A Step-by-Step Guide",
+    "excerpt": "Learn the best methods for unclogging your sink drain, from simple DIY solutions to when it's time to call a professional.",
+    "image": "/images/blog/unclog-sink.webp",
+    "readTime": "5 MIN READ",
+    "link": "/blog/how-to-unclog-a-sink"
+  },
+  {
+    "id": 2,
+    "title": "Signs Your Furnace Needs Repair",
+    "excerpt": "Don't wait until your furnace breaks down completely. Learn the warning signs that indicate your heating system needs attention.",
+    "image": "/images/blog/furnace-repair.webp",
+    "readTime": "4 MIN READ",
+    "link": "/blog/furnace-repair-signs"
+  },
+  {
+    "id": 3,
+    "title": "AC Maintenance Tips for Summer",
+    "excerpt": "Keep your air conditioning running efficiently all summer with these essential maintenance tips from our HVAC experts.",
+    "image": "/images/blog/ac-maintenance.webp",
+    "readTime": "6 MIN READ",
+    "link": "/blog/ac-maintenance-tips"
+  }
+]
