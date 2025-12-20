@@ -67,13 +67,21 @@ export default function Header() {
             </button>
           </div>
 
-          <button 
-            className={styles.menuBtn}
-            onClick={() => setIsMobileMenuOpen(true)}
-            aria-label="Open menu"
-          >
-            <Icon name="menu" size={28} />
-          </button>
+          <div className={styles.mobileActions}>
+            <button 
+              className={styles.mobileSearchBtn}
+              aria-label="Search"
+            >
+              <Icon name="search" size={22} />
+            </button>
+            <button 
+              className={styles.menuBtn}
+              onClick={() => setIsMobileMenuOpen(true)}
+              aria-label="Open menu"
+            >
+              <Icon name="menu" size={26} />
+            </button>
+          </div>
         </div>
       </Container>
 

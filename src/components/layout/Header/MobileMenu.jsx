@@ -1,9 +1,17 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Button, Icon } from '../../common';
 import styles from './MobileMenu.module.css';
 
 export default function MobileMenu({ isOpen, onClose, navigation }) {
   const [expandedItem, setExpandedItem] = useState(null);
+  const menuRef = useRef(null);
+
+  // Reset scroll position when menu opens
+  useEffect(() => {
+    if (isOpen && menuRef.current) {
+      menuRef.current.scrollTop = 0;
+    }
+  }, [isOpen]);
 
   const toggleItem = (label) => {
     setExpandedItem(expandedItem === label ? null : label);
@@ -15,7 +23,10 @@ export default function MobileMenu({ isOpen, onClose, navigation }) {
         className={`${styles.overlay} ${isOpen ? styles.open : ''}`}
         onClick={onClose}
       />
-      <div className={`${styles.menu} ${isOpen ? styles.open : ''}`}>
+      <div 
+        ref={menuRef}
+        className={`${styles.menu} ${isOpen ? styles.open : ''}`}
+      >
         <div className={styles.header}>
           <img src="/images/lorenz-logo.svg" alt="Lorenz" className={styles.logo} />
           <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">

@@ -1,119 +1,95 @@
 import { Container, Icon } from '../../common';
-import locations from '../../../data/locations.json';
 import styles from './Footer.module.css';
 
-const footerNav = [
-  {
-    title: 'Plumbing',
-    links: [
-      { label: 'Plumbing Repair', href: '/plumbing-repair' },
-      { label: 'Plumbing Installation', href: '/plumbing-installation' },
-      { label: 'Water Softener', href: '/water-softener-replacement' }
-    ]
-  },
-  {
-    title: 'Sewer & Drain',
-    links: [
-      { label: 'Sewer Line Repair', href: '/sewer-line-repair' }
-    ]
-  },
-  {
-    title: 'Heating',
-    links: [
-      { label: 'Furnace Repair', href: '/furnace-repair' },
-      { label: 'Furnace Maintenance', href: '/furnace-maintenance' },
-      { label: 'Furnace Replacement', href: '/furnace-replacement' },
-      { label: 'Heating Installation', href: '/heating-system-installation' }
-    ]
-  },
-  {
-    title: 'Air Conditioning',
-    links: [
-      { label: 'AC Repair', href: '/ac-repair' },
-      { label: 'AC Maintenance', href: '/ac-maintenance' },
-      { label: 'AC Replacement', href: '/ac-replacement' },
-      { label: 'Ductless Systems', href: '/ductless-systems' }
-    ]
-  },
-  {
-    title: 'Additional',
-    links: [
-      { label: 'Controls & Thermostats', href: '/controls-thermostats' },
-      { label: 'Additional Services', href: '/additional-services' }
-    ]
-  },
-  {
-    title: 'About',
-    links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Meet the Team', href: '/meet-the-team' },
-      { label: 'Reviews', href: '/reviews' },
-      { label: 'Partners', href: '/partners' }
-    ]
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Blog', href: '/blog' },
-      { label: 'Contact', href: '/contact' }
-    ]
-  }
+const socialLinks = [
+  { name: 'facebook', href: 'https://facebook.com/lorenzphac', label: 'Facebook' },
+  { name: 'tiktok', href: 'https://tiktok.com/@lorenzphac', label: 'TikTok' },
+  { name: 'google', href: 'https://g.page/lorenzphac', label: 'Google' },
+];
+
+const quickLinks = [
+  { label: 'Services', href: '/services' },
+  { label: 'About', href: '/about' },
+  { label: 'Reviews', href: '/reviews' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <div className={styles.top}>
+        {/* Main Footer Content */}
+        <div className={styles.main}>
+          {/* Brand & Tagline */}
           <div className={styles.brand}>
-            <img src="/images/lorenz-logo-white.svg" alt="Lorenz" className={styles.logo} />
-            <span className={styles.emergency}>Emergency Services 24/7</span>
+            <img 
+              src="/images/lorenz-logo-white.svg" 
+              alt="Lorenz Plumbing Heating & Air" 
+              className={styles.logo} 
+            />
+            <p className={styles.tagline}>
+              Your friends in plumbing, heating & air since 1978.
+            </p>
+            <div className={styles.social}>
+              {socialLinks.map((link) => (
+                <a 
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.socialLink}
+                  aria-label={link.label}
+                >
+                  {link.name === 'tiktok' ? (
+                    <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+                      <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
+                    </svg>
+                  ) : (
+                    <Icon name={link.name} size={20} />
+                  )}
+                </a>
+              ))}
+            </div>
           </div>
 
-          <div className={styles.locations}>
-            {locations.offices.map((office) => (
-              <div key={office.id} className={styles.location}>
-                <h3>{office.name}</h3>
-                <p>{office.address}</p>
-                <a href={`tel:${office.phone}`}>
-                  <Icon name="phone" size={14} />
-                  {office.phone}
-                </a>
-                <a href={`mailto:${office.email}`}>
-                  <Icon name="email" size={14} />
-                  {office.email}
-                </a>
-              </div>
+          {/* Quick Links */}
+          <nav className={styles.nav}>
+            {quickLinks.map((link) => (
+              <a key={link.href} href={link.href} className={styles.navLink}>
+                {link.label}
+              </a>
             ))}
+          </nav>
+
+          {/* Contact Info */}
+          <div className={styles.contact}>
+            <a href="tel:4174413517" className={styles.phone}>
+              <Icon name="phone" size={18} />
+              <span>(417) 441-3517</span>
+            </a>
+            <p className={styles.address}>
+              1429 N Cedarbrook Ave<br />
+              Springfield, MO 65802
+            </p>
+            <span className={styles.badge}>24/7 Emergency Service</span>
           </div>
         </div>
 
-        <nav className={styles.megaNav}>
-          {footerNav.map((column) => (
-            <div key={column.title} className={styles.navColumn}>
-              <h4>{column.title}</h4>
-              <ul>
-                {column.links.map((link) => (
-                  <li key={link.href}>
-                    <a href={link.href}>{link.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
-        </nav>
+        {/* Divider */}
+        <div className={styles.divider} />
 
+        {/* Bottom Bar */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Lorenz Plumbing Heating & Air. All rights reserved.
+            © {new Date().getFullYear()} Lorenz Plumbing Heating & Air
           </p>
-          <div className={styles.links}>
-            <a href="/privacy-policy">Privacy Policy</a>
-            <a href="/terms-conditions">Terms & Conditions</a>
+          <div className={styles.legal}>
+            <a href="/privacy-policy">Privacy</a>
+            <span className={styles.dot}>·</span>
+            <a href="/terms-conditions">Terms</a>
+            <span className={styles.dot}>·</span>
             <a href="/accessibility">Accessibility</a>
           </div>
-          <p className={styles.credit}>Site design by Hook Agency</p>
         </div>
       </Container>
     </footer>

@@ -1,4 +1,4 @@
-import { Header, Footer } from '../components/layout';
+import { Header, Footer, MobileBottomBar } from '../components/layout';
 import {
   Hero,
   Services,
@@ -6,7 +6,6 @@ import {
   Reviews,
   HonestService,
   About,
-  ServiceAreas,
   Offers,
   Trusted,
   FAQ,
@@ -25,7 +24,6 @@ export default function Home() {
         <Reviews />
         <HonestService />
         <About />
-        <ServiceAreas />
         <Offers />
         <Trusted />
         <FAQ />
@@ -33,6 +31,7 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
+      <MobileBottomBar />
     </>
   );
 }
