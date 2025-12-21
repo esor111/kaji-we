@@ -5,16 +5,16 @@ import styles from './Services.module.css';
 
 export default function Services() {
   return (
-    <section className={styles.services}>
+    <section id="services" className={styles.services}>
       <Container>
         <div className={styles.header}>
           <SectionHeader
-            label="What We Do"
-            title="Our Services"
-            description="From plumbing repairs to HVAC installations, we've got you covered."
+            label="हाम्रो सेवाहरू"
+            title="Waterproofing Services"
+            description="तपाईंको घरलाई पानीबाट जोगाउन हामीसँग सबै प्रकारको waterproofing सेवा उपलब्ध छ।"
           />
-          <Button href="/services" variant="outline" icon={<Icon name="arrowRight" size={16} />}>
-            View All Services
+          <Button href="#contact" variant="outline" icon={<Icon name="arrowRight" size={16} />}>
+            सम्पर्क गर्नुहोस्
           </Button>
         </div>
 

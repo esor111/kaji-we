@@ -73,8 +73,13 @@
   transform: rotate(180deg);
 }
 
-.navBtn:hover {
+.navBtn:hover:not(.disabled) {
   background-color: var(--color-primary-red);
+}
+
+.navBtn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 @media (min-width: 768px) {

@@ -30,7 +30,7 @@ export default function MobileBottomBar() {
 
       {/* Call - Center prominent button */}
       <a 
-        href="tel:4174413517" 
+        href="tel:9864488561" 
         className={styles.callButton}
         aria-label="Call us"
       >
@@ -43,7 +43,7 @@ export default function MobileBottomBar() {
 
       {/* Contact Us */}
       <a 
-        href="/contact" 
+        href="#contact" 
         className={styles.item}
         aria-label="Contact us"
       >

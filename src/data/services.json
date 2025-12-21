@@ -1,42 +1,42 @@
 [
   {
-    "id": "plumbing",
-    "title": "Plumbing",
-    "description": "Reliable plumbing service for your home or business. From repairs to installations, we handle it all.",
-    "icon": "plumbing",
-    "image": "/images/services/plumbing.webp",
-    "link": "/plumbing"
+    "id": "waterproofing",
+    "title": "Waterproofing",
+    "description": "Professional waterproofing solutions for your home or business. Protect your property from water damage.",
+    "icon": "waterproofing",
+    "image": "/images/services/waterproofing.jpg",
+    "link": "#services"
   },
   {
-    "id": "heating",
-    "title": "Heating",
-    "description": "Keep your home warm and comfortable with our expert heating services and furnace solutions.",
-    "icon": "heating",
+    "id": "basement",
+    "title": "Basement Waterproofing",
+    "description": "Keep your basement dry and protected with our expert waterproofing solutions.",
+    "icon": "basement",
     "image": "/images/services/heating.webp",
-    "link": "/heating"
+    "link": "#services"
   },
   {
-    "id": "air-conditioning",
-    "title": "Air Conditioning",
-    "description": "Stay cool all summer long with our professional AC repair, maintenance, and installation services.",
-    "icon": "ac",
+    "id": "roof",
+    "title": "Roof Waterproofing",
+    "description": "Professional roof waterproofing to prevent leaks and extend the life of your roof.",
+    "icon": "roof",
     "image": "/images/services/air-conditioning.webp",
-    "link": "/air-conditioning"
+    "link": "#services"
   },
   {
-    "id": "sewer-drain",
-    "title": "Sewer and Drain",
-    "description": "Expert sewer and drain services to keep your plumbing system flowing smoothly.",
-    "icon": "sewer",
+    "id": "wall",
+    "title": "Wall Waterproofing",
+    "description": "Protect your walls from moisture damage with our comprehensive waterproofing services.",
+    "icon": "wall",
     "image": "/images/services/sewer-drain.webp",
-    "link": "/sewer-drain"
+    "link": "#services"
   },
   {
-    "id": "additional",
-    "title": "Additional Services",
-    "description": "From thermostats to water heaters, we offer a full range of home comfort solutions.",
-    "icon": "additional",
+    "id": "foundation",
+    "title": "Foundation Repair",
+    "description": "Expert foundation repair and waterproofing to keep your home structurally sound.",
+    "icon": "foundation",
     "image": "/images/services/additional.webp",
-    "link": "/additional-services"
+    "link": "#services"
   }
 ]

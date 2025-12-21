@@ -7,28 +7,19 @@ const socialLinks = [
   { name: 'google', href: 'https://g.page/lorenzphac', label: 'Google' },
 ];
 
-const quickLinks = [
-  { label: 'Services', href: '/services' },
-  { label: 'About', href: '/about' },
-  { label: 'Reviews', href: '/reviews' },
-  { label: 'Contact', href: '/contact' },
-];
-
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        {/* Main Footer Content */}
         <div className={styles.main}>
-          {/* Brand & Tagline */}
           <div className={styles.brand}>
             <img 
               src="/images/lorenz-logo-white.svg" 
-              alt="Lorenz Plumbing Heating & Air" 
+              alt="Waterproofing Nepal" 
               className={styles.logo} 
             />
             <p className={styles.tagline}>
-              Your friends in plumbing, heating & air since 1978.
+              तपाईंको घरको सुरक्षाको लागि विश्वसनीय waterproofing सेवा।
             </p>
             <div className={styles.social}>
               {socialLinks.map((link) => (
@@ -52,43 +43,28 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Quick Links */}
-          <nav className={styles.nav}>
-            {quickLinks.map((link) => (
-              <a key={link.href} href={link.href} className={styles.navLink}>
-                {link.label}
-              </a>
-            ))}
-          </nav>
-
-          {/* Contact Info */}
           <div className={styles.contact}>
-            <a href="tel:4174413517" className={styles.phone}>
+            <a href="tel:9864488561" className={styles.phone}>
               <Icon name="phone" size={18} />
-              <span>(417) 441-3517</span>
+              <span>986-448-8561</span>
             </a>
             <p className={styles.address}>
-              1429 N Cedarbrook Ave<br />
-              Springfield, MO 65802
+              Kathmandu, Nepal
             </p>
             <span className={styles.badge}>24/7 Emergency Service</span>
           </div>
         </div>
 
-        {/* Divider */}
         <div className={styles.divider} />
 
-        {/* Bottom Bar */}
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            © {new Date().getFullYear()} Lorenz Plumbing Heating & Air
+            © {new Date().getFullYear()} Waterproofing Nepal
           </p>
           <div className={styles.legal}>
-            <a href="/privacy-policy">Privacy</a>
+            <a href="#privacy">Privacy</a>
             <span className={styles.dot}>·</span>
-            <a href="/terms-conditions">Terms</a>
-            <span className={styles.dot}>·</span>
-            <a href="/accessibility">Accessibility</a>
+            <a href="#terms">Terms</a>
           </div>
         </div>
       </Container>

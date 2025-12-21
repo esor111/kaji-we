@@ -7,18 +7,18 @@ export default function HonestService() {
       <Container>
         <div className={styles.grid}>
           <div className={styles.imageWrapper}>
-            <img src="/images/honest/technician-van.webp" alt="Lorenz technician" />
+            <img src="/images/honest/technician-van.webp" alt="Waterproofing Expert" />
           </div>
 
           <div className={styles.content}>
-            <h2>Your Source for Honest Heating, Air Conditioning, and Plumbing</h2>
+            <h2>तपाईंको घरको सुरक्षाको लागि विश्वसनीय Waterproofing सेवा</h2>
             <p>
-              At Lorenz, we believe in doing things the right way. That means honest pricing, 
-              quality workmanship, and treating your home like our own. Our team of certified 
-              technicians is dedicated to providing you with the best service possible.
+              हामी विश्वास गर्छौं कि हरेक घरले उत्तम सुरक्षा पाउनु पर्छ। 
+              इमानदार मूल्य, गुणस्तरीय काम, र तपाईंको घरलाई आफ्नै जस्तो व्यवहार - 
+              यही हाम्रो प्रतिबद्धता हो। हाम्रो अनुभवी टोली तपाईंको सेवामा सधैं तत्पर छ।
             </p>
-            <Button href="/contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
-              Book Your Appointment
+            <Button href="#contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
+              Appointment लिनुहोस्
             </Button>
           </div>
         </div>

@@ -1,72 +1,72 @@
 [
   {
     "id": 1,
-    "name": "Gregory G",
-    "text": "I scheduled Lorenz to come help me with a plumbing issue. They were prompt, professional, and fixed the problem quickly. Highly recommend!",
+    "name": "राजेश श्रेष्ठ",
+    "text": "धेरै राम्रो सेवा! हाम्रो घरको बेसमेन्टमा पानी चुहावट थियो, तर यी दाइहरूले एकदमै प्रोफेशनल तरिकाले समस्या समाधान गरिदिनुभयो। धन्यवाद!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-1.webp"
   },
   {
     "id": 2,
-    "name": "Sarah M",
-    "text": "Excellent service from start to finish. The technician was knowledgeable and explained everything clearly. Will definitely use again.",
+    "name": "सुनिता गुरुङ",
+    "text": "छतको waterproofing को लागि यिनीहरूलाई बोलाएको थिएँ। समयमै आउनुभयो, काम पनि राम्रो गर्नुभयो। अब बर्षातमा पनि कुनै समस्या छैन।",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-2.webp"
   },
   {
     "id": 3,
-    "name": "Michael R",
-    "text": "Lorenz installed our new HVAC system and did an amazing job. Fair pricing and quality workmanship. Thank you!",
+    "name": "विकास थापा",
+    "text": "नयाँ घर बनाउँदा foundation waterproofing गराएको थिएँ। Quality काम र reasonable price। Highly recommend गर्छु!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-3.webp"
   },
   {
     "id": 4,
-    "name": "Jennifer L",
-    "text": "Called for an emergency plumbing repair and they came out the same day. Professional, courteous, and reasonably priced.",
+    "name": "अनिता महर्जन",
+    "text": "भित्ताबाट पानी आउने समस्या थियो। एक पटकमै ठीक गरिदिनुभयो। अब ३ वर्ष भयो, कुनै समस्या छैन। धेरै धेरै धन्यवाद!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-4.webp"
   },
   {
     "id": 5,
-    "name": "David K",
-    "text": "We've used Lorenz for years and they never disappoint. Trustworthy and reliable service every time.",
+    "name": "प्रकाश राई",
+    "text": "Emergency मा फोन गरेको थिएँ, तुरुन्तै आउनुभयो। Professional team, fair pricing। Best waterproofing service in Kathmandu!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-5.webp"
   },
   {
     "id": 6,
-    "name": "Amanda T",
-    "text": "Great experience with furnace maintenance. The tech was thorough and gave helpful tips for keeping our system running efficiently.",
+    "name": "मीना तामाङ",
+    "text": "बाथरूमको waterproofing गराएको थिएँ। एकदम सफा काम। तल्लो तलामा पानी जाने समस्या पूर्ण रूपमा समाधान भयो।",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-6.webp"
   },
   {
     "id": 7,
-    "name": "Robert H",
-    "text": "Lorenz replaced our old AC unit and the difference is incredible. Professional installation and great follow-up service.",
+    "name": "सन्तोष पौडेल",
+    "text": "पुरानो घरको renovation गर्दा waterproofing को लागि यिनीहरूलाई contact गरेको। Best decision ever! Quality materials र experienced team।",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-7.webp"
   },
   {
     "id": 8,
-    "name": "Lisa P",
-    "text": "Friendly staff and excellent technicians. They fixed our water heater issue quickly and at a fair price.",
+    "name": "रीता बस्नेत",
+    "text": "Terrace waterproofing गराएको थिएँ। अब monsoon मा पनि tension छैन। Thank you team!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-8.webp"
   },
   {
     "id": 9,
-    "name": "Chris W",
-    "text": "Top-notch service! From scheduling to completion, everything was smooth and professional. Highly recommend Lorenz!",
+    "name": "दीपक कार्की",
+    "text": "Commercial building को waterproofing गराएको। Large project थियो तर professionally handle गर्नुभयो। Highly satisfied!",
     "rating": 5,
     "source": "google",
     "avatar": "/images/reviews/avatar-9.webp"

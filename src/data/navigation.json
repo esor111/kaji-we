@@ -1,76 +1,58 @@
 {
   "logo": {
     "src": "/images/lorenz-logo.svg",
-    "alt": "Lorenz Plumbing Heating & Air"
+    "alt": "Waterproofing Nepal"
   },
-  "phone": "(417) 441-3517",
+  "phone": "986-448-8561",
   "mainNav": [
     {
       "label": "Services",
-      "href": "/services",
+      "href": "#services",
       "children": [
         {
-          "category": "Plumbing",
+          "category": "Waterproofing",
           "items": [
-            { "label": "Plumbing Repair", "href": "/plumbing-repair" },
-            { "label": "Plumbing Installation", "href": "/plumbing-installation" },
-            { "label": "Water Softener Replacement", "href": "/water-softener-replacement" }
+            { "label": "Basement Waterproofing", "href": "#services" },
+            { "label": "Roof Waterproofing", "href": "#services" },
+            { "label": "Wall Waterproofing", "href": "#services" }
           ]
         },
         {
-          "category": "Heating",
+          "category": "Foundation",
           "items": [
-            { "label": "Furnace Repair", "href": "/furnace-repair" },
-            { "label": "Furnace Maintenance", "href": "/furnace-maintenance" },
-            { "label": "Furnace Replacement", "href": "/furnace-replacement" },
-            { "label": "Heating System Installation", "href": "/heating-system-installation" }
+            { "label": "Foundation Repair", "href": "#services" },
+            { "label": "Foundation Waterproofing", "href": "#services" }
           ]
         },
         {
-          "category": "Air Conditioning",
+          "category": "Bathroom",
           "items": [
-            { "label": "AC Repair", "href": "/ac-repair" },
-            { "label": "AC Maintenance", "href": "/ac-maintenance" },
-            { "label": "AC Replacement", "href": "/ac-replacement" },
-            { "label": "Ductless Systems", "href": "/ductless-systems" }
-          ]
-        },
-        {
-          "category": "Sewer & Drain",
-          "items": [
-            { "label": "Sewer Line Repair", "href": "/sewer-line-repair" }
-          ]
-        },
-        {
-          "category": "Additional Services",
-          "items": [
-            { "label": "Controls & Thermostats", "href": "/controls-thermostats" },
-            { "label": "Additional Services", "href": "/additional-services" }
+            { "label": "Bathroom Waterproofing", "href": "#services" },
+            { "label": "Terrace Waterproofing", "href": "#services" }
           ]
         }
       ]
     },
     {
       "label": "About Us",
-      "href": "/about",
+      "href": "#about",
       "children": [
-        { "label": "About Lorenz", "href": "/about" },
-        { "label": "Meet the Team", "href": "/meet-the-team" },
-        { "label": "Reviews", "href": "/reviews" },
-        { "label": "Partners", "href": "/partners" }
+        { "label": "About Us", "href": "#about" },
+        { "label": "Our Team", "href": "#about" },
+        { "label": "Reviews", "href": "#reviews" }
       ]
     },
     {
       "label": "Resources",
-      "href": "/resources",
+      "href": "#faq",
       "children": [
-        { "label": "FAQ", "href": "/faq" },
-        { "label": "Blog", "href": "/blog" }
+        { "label": "FAQ", "href": "#faq" },
+        { "label": "Blog", "href": "#blog" }
       ]
     },
     {
       "label": "Contact",
-      "href": "/contact"
+      "href": "#contact"
     }
   ]
 }

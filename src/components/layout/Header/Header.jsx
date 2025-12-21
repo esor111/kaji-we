@@ -54,13 +54,13 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
-            <a href={`tel:${navigation.phone}`} className={styles.phone}>
+            <a href="tel:9864488561" className={styles.phone}>
               <Icon name="phone" size={18} />
-              <span>Call Us Today</span>
-              <strong>{navigation.phone}</strong>
+              <span>Call Us</span>
+              <strong>986-448-8561</strong>
             </a>
-            <Button href="/contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
-              Book Service
+            <Button href="#contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
+              Book Now
             </Button>
             <button className={styles.searchBtn} aria-label="Search">
               <Icon name="search" size={20} />

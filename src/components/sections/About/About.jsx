@@ -2,26 +2,24 @@ import styles from './About.module.css';
 
 export default function About() {
   return (
-    <section className={styles.heroSection}>
+    <section id="about" className={styles.heroSection}>
       {/* Left Side - Blue Content */}
       <div className={styles.contentBox}>
-        <div className={styles.subHeader}>About Us</div>
-        <h2 className={styles.title}>A HISTORY OF<br />DEPENDABLE SERVICE</h2>
+        <div className={styles.subHeader}>हाम्रो बारेमा</div>
+        <h2 className={styles.title}>विश्वसनीय सेवाको<br />इतिहास</h2>
         <p className={styles.description}>
-          "We're not going anywhere. From our humble beginnings in Springfield in 1978, 
-          we've grown into a thriving HVAC and plumbing business. Serving Springfield, 
-          Branson, Bolivar, and surrounding areas. That means for nearly 50 years, while 
-          other home repair companies spin up and fade away or get bought out by the big guys, 
-          we're still here taking care of generations of customers just like you."
+          "हामी कहीं जाँदैनौं। हाम्रो सुरुवात साना थियो, तर आज हामी Nepal को 
+          अग्रणी waterproofing कम्पनी बनेका छौं। Kathmandu, Lalitpur, Bhaktapur 
+          र वरपरका क्षेत्रहरूमा सेवा प्रदान गर्दै। जहाँ अरू कम्पनीहरू आउँछन् र जान्छन्, 
+          हामी यहीं छौं - तपाईंको घरको सुरक्षाको लागि।"
         </p>
-        <div className={styles.signOff}>-YOUR FRIEND, MIKE / OWNER & CEO</div>
+        <div className={styles.signOff}>- तपाईंको साथी / FOUNDER</div>
 
         <div className={styles.actionRow}>
-          <a href="/meet-the-team" className={styles.btn}>
-            Meet Our Team 
+          <a href="#contact" className={styles.btn}>
+            सम्पर्क गर्नुहोस्
             <span className={styles.btnArrow}>→</span>
           </a>
-          <div className={styles.signature}>Mike</div>
         </div>
       </div>
 
@@ -29,8 +27,8 @@ export default function About() {
       <div className={styles.imageArea}>
         <div className={styles.circleWrapper}>
           <img 
-            src="/images/about/mike-large.webp" 
-            alt="Mike - Owner & CEO" 
+            src="/images/about/guy.jpg" 
+            alt="Founder" 
             className={styles.photo} 
           />
 

@@ -11,7 +11,6 @@ export default function Hero() {
     const video = videoRef.current;
     if (video) {
       video.play().catch(() => {
-        // Autoplay failed, fallback to image
         setIsVideoLoaded(false);
       });
     }
@@ -24,14 +23,12 @@ export default function Hero() {
   return (
     <section className={styles.hero}>
       <div className={styles.background}>
-        {/* Fallback Image */}
         <img 
           src="/images/hero/hero-bg.webp" 
           alt="" 
           className={`${styles.bgImage} ${isVideoLoaded ? styles.hidden : ''}`}
         />
         
-        {/* Video Background */}
         <video
           ref={videoRef}
           className={`${styles.bgVideo} ${isVideoLoaded ? styles.visible : ''}`}
@@ -43,13 +40,10 @@ export default function Hero() {
           onLoadedData={handleVideoLoaded}
           poster="/images/hero/hero-bg.webp"
         >
-          <source src="/video/hero-video.mp4" type="video/mp4" />
+          <source src="/video/waterproofing.mp4" type="video/mp4" />
         </video>
         
-        {/* Gradient Overlay */}
         <div className={styles.overlay} />
-        
-        {/* Subtle Vignette Effect */}
         <div className={styles.vignette} />
       </div>
 
@@ -57,14 +51,14 @@ export default function Hero() {
         <div className={styles.content}>
           <span className={styles.label}>
             <span className={styles.labelIcon}>★</span>
-            Your FRIENDS in Plumbing Heating & Air
+            Nepal को विश्वसनीय Waterproofing सेवा
           </span>
           <h1 className={styles.title}>
-            Plumbing, Heating, and Air Conditioning Services in Springfield, MO & Beyond
+            तपाईंको घरलाई पानीबाट जोगाउनुहोस्
           </h1>
           <p className={styles.description}>
-            Family-owned and operated since 1978, Lorenz provides reliable plumbing, 
-            heating, and air conditioning services to Springfield and surrounding areas.
+            Professional waterproofing solutions for your home and business. 
+            Basement, roof, wall, र foundation - सबै प्रकारको waterproofing सेवा।
           </p>
 
           <ul className={styles.features}>
@@ -72,19 +66,19 @@ export default function Hero() {
               <span className={styles.checkIcon}>
                 <Icon name="checkCircle" size={24} />
               </span>
-              <span>45+ Years of Experience</span>
+              <span>१०+ वर्षको अनुभव</span>
             </li>
             <li>
               <span className={styles.checkIcon}>
                 <Icon name="checkCircle" size={24} />
               </span>
-              <span>Free Estimates</span>
+              <span>Free Site Visit</span>
             </li>
             <li>
               <span className={styles.checkIcon}>
                 <Icon name="checkCircle" size={24} />
               </span>
-              <span>Financing Available</span>
+              <span>Warranty Available</span>
             </li>
           </ul>
 
@@ -101,26 +95,26 @@ export default function Hero() {
                   <Icon key={i} name="star" size={18} />
                 ))}
               </div>
-              <span>200+ Google Reviews</span>
+              <span>२००+ सन्तुष्ट ग्राहक</span>
             </div>
           </div>
 
           <div className={styles.ctaButtons}>
             <Button 
-              href="/contact" 
+              href="#contact" 
               variant="secondary" 
               size="lg"
               icon={<Icon name="arrowRight" size={18} />}
             >
-              Get Free Estimate
+              Free Quote पाउनुहोस्
             </Button>
             <Button 
-              href="tel:4174413517" 
+              href="tel:9864488561" 
               variant="outlineWhite" 
               size="lg"
               icon={<Icon name="phone" size={18} />}
             >
-              (417) 441-3517
+              986-448-8561
             </Button>
           </div>
         </div>

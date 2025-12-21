@@ -7,22 +7,22 @@ export default function FAQ() {
   const [openId, setOpenId] = useState(1);
 
   return (
-    <section className={styles.section}>
+    <section id="faq" className={styles.section}>
       <Container>
         <div className={styles.grid}>
           <div className={styles.sidebar}>
-            <img src="/images/faq/mike.webp" alt="Mike" className={styles.photo} />
+            <img src="/images/about/guy.jpg" alt="Founder" className={styles.photo} />
             <blockquote className={styles.quote}>
-              "Have questions? We're here to help. Our team is always ready to answer 
-              your questions and provide the guidance you need."
+              "प्रश्न छ? हामी यहाँ छौं। हाम्रो टोली तपाईंको प्रश्नको जवाफ दिन 
+              र मार्गदर्शन प्रदान गर्न सधैं तयार छ।"
             </blockquote>
-            <Button href="/faq" variant="outline" icon={<Icon name="arrowRight" size={16} />}>
-              See All Questions
+            <Button href="#contact" variant="outline" icon={<Icon name="arrowRight" size={16} />}>
+              सम्पर्क गर्नुहोस्
             </Button>
           </div>
 
           <div className={styles.content}>
-            <h2 className={styles.title}>Frequently Asked Questions</h2>
+            <h2 className={styles.title}>बारम्बार सोधिने प्रश्नहरू</h2>
             <div className={styles.accordion}>
               {faqData.map((item) => (
                 <div 
