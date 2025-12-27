@@ -36,6 +36,8 @@
   object-fit: cover;
   opacity: 0;
   transition: opacity 1.5s ease;
+  border: none;
+  pointer-events: none;
 }
 
 .bgVideo.visible {

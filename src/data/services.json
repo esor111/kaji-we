@@ -12,7 +12,7 @@
     "title": "Basement Waterproofing",
     "description": "Keep your basement dry and protected with our expert waterproofing solutions.",
     "icon": "basement",
-    "image": "/images/services/heating.webp",
+    "image": "/images/services/one.jpg",
     "link": "#services"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Roof Waterproofing",
     "description": "Professional roof waterproofing to prevent leaks and extend the life of your roof.",
     "icon": "roof",
-    "image": "/images/services/air-conditioning.webp",
+    "image": "/images/services/two.jpg",
     "link": "#services"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Wall Waterproofing",
     "description": "Protect your walls from moisture damage with our comprehensive waterproofing services.",
     "icon": "wall",
-    "image": "/images/services/sewer-drain.webp",
+    "image": "/images/services/three.jpg",
     "link": "#services"
   },
   {
