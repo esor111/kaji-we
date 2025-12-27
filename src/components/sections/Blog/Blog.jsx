@@ -1,7 +1,27 @@
-import { Container, SectionHeader, Button, Icon } from '../../common';
-import BlogCard from './BlogCard';
-import blogData from '../../../data/blog.json';
+import { Container, SectionHeader } from '../../common';
+import VideoCard from './VideoCard';
 import styles from './Blog.module.css';
+
+const videos = [
+  {
+    id: 1,
+    title: "HVAC Maintenance Tips",
+    url: "https://www.youtube.com/watch?v=-j0rjlfmDx4",
+    videoId: "-j0rjlfmDx4"
+  },
+  {
+    id: 2,
+    title: "Plumbing Basics",
+    url: "https://www.youtube.com/watch?v=3I9Wnc78qvw",
+    videoId: "3I9Wnc78qvw"
+  },
+  {
+    id: 3,
+    title: "Home Services Guide",
+    url: "https://www.youtube.com/watch?v=GegwAs7GXwg",
+    videoId: "GegwAs7GXwg"
+  }
+];
 
 export default function Blog() {
   return (
@@ -9,18 +29,15 @@ export default function Blog() {
       <Container>
         <div className={styles.header}>
           <SectionHeader
-            label="Blog"
+            label="Videos"
             title="Your Home Services Hub"
-            description="Tips, guides, and insights to help you maintain your home."
+            description="Watch our helpful videos on home maintenance and services."
           />
-          <Button href="/blog" variant="outline" icon={<Icon name="arrowRight" size={16} />}>
-            View All Articles
-          </Button>
         </div>
 
         <div className={styles.grid}>
-          {blogData.map((post) => (
-            <BlogCard key={post.id} post={post} />
+          {videos.map((video) => (
+            <VideoCard key={video.id} video={video} />
           ))}
         </div>
       </Container>
