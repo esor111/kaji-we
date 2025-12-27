@@ -6,14 +6,14 @@ const videos = [
   {
     id: 1,
     title: "HVAC Maintenance Tips",
-    url: "https://www.youtube.com/watch?v=-j0rjlfmDx4",
-    videoId: "-j0rjlfmDx4"
+    url: "https://www.youtube.com/watch?v=oKWygayj81w",
+    videoId: "oKWygayj81w"
   },
   {
     id: 2,
     title: "Plumbing Basics",
-    url: "https://www.youtube.com/watch?v=3I9Wnc78qvw",
-    videoId: "3I9Wnc78qvw"
+    url: "https://www.youtube.com/watch?v=vHgX03H964I",
+    videoId: "vHgX03H964I"
   },
   {
     id: 3,

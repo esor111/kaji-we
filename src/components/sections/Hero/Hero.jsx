@@ -4,13 +4,21 @@ import HeroCards from './HeroCards';
 import styles from './Hero.module.css';
 
 export default function Hero() {
-  const iframeRef = useRef(null);
-  const [isVideoLoaded, setIsVideoLoaded] = useState(true);
+  const videoRef = useRef(null);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
 
   useEffect(() => {
-    // YouTube iframe is ready immediately
-    setIsVideoLoaded(true);
+    const video = videoRef.current;
+    if (video) {
+      video.play().catch(() => {
+        setIsVideoLoaded(false);
+      });
+    }
   }, []);
+
+  const handleVideoLoaded = () => {
+    setIsVideoLoaded(true);
+  };
 
   return (
     <section className={styles.hero}>
@@ -21,15 +29,19 @@ export default function Hero() {
           className={`${styles.bgImage} ${isVideoLoaded ? styles.hidden : ''}`}
         />
         
-        <iframe
-          ref={iframeRef}
+        <video
+          ref={videoRef}
           className={`${styles.bgVideo} ${isVideoLoaded ? styles.visible : ''}`}
-          src="https://www.youtube.com/embed/x5u2DtirJT0?autoplay=1&mute=1&loop=1&playlist=x5u2DtirJT0&controls=0&modestbranding=1"
-          title="YouTube video"
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          onLoadedData={handleVideoLoaded}
+          poster="/images/hero/hero-bg.webp"
+        >
+          <source src="/video/waterproofing.mp4" type="video/mp4" />
+        </video>
         
         <div className={styles.overlay} />
         <div className={styles.vignette} />
