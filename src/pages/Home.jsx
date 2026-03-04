@@ -1,4 +1,5 @@
 import { Header, Footer, MobileBottomBar } from '../components/layout';
+import { WhatsAppButton } from '../components/common';
 import {
   Hero,
   Services,
@@ -32,6 +33,7 @@ export default function Home() {
       </main>
       <Footer />
       <MobileBottomBar />
+      <WhatsAppButton />
     </>
   );
 }

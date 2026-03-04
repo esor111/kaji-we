@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Container, Button, Icon } from '../../common';
+import { Container, Button, Icon, LanguageToggle } from '../../common';
 import MegaMenu from './MegaMenu';
 import MobileMenu from './MobileMenu';
 import navigation from '../../../data/navigation.json';
@@ -54,6 +54,7 @@ export default function Header() {
           </nav>
 
           <div className={styles.actions}>
+            <LanguageToggle />
             <a href="tel:9864488561" className={styles.phone}>
               <Icon name="phone" size={18} />
               <span>Call Us</span>
@@ -68,6 +69,7 @@ export default function Header() {
           </div>
 
           <div className={styles.mobileActions}>
+            <LanguageToggle />
             <button 
               className={styles.mobileSearchBtn}
               aria-label="Search"

@@ -28,41 +28,81 @@
   opacity: 0;
 }
 
-/* Video Background */
+/* Video Background - Enhanced for TikTok-style videos */
 .bgVideo {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 1.5s ease;
+  transition: opacity 2s ease;
+  /* Subtle Ken Burns effect - slow zoom */
+  animation: kenBurns 20s ease-in-out infinite alternate;
 }
 
 .bgVideo.visible {
   opacity: 1;
 }
 
-/* Main Gradient Overlay - Diagonal Blue */
+/* Ken Burns Effect - Subtle zoom for cinematic feel */
+@keyframes kenBurns {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}
+
+/* Color Grade Overlay - Enhances video colors and contrast */
+.colorGrade {
+  position: absolute;
+  inset: 0;
+  /* Subtle color grading for better mood */
+  background: linear-gradient(
+    180deg,
+    rgba(30, 64, 175, 0.08) 0%,
+    transparent 30%,
+    transparent 70%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
+
+/* Main Gradient Overlay - Enhanced for non-white videos */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(26, 31, 113, 0.3) 0%,
-    rgba(26, 31, 113, 0.5) 30%,
-    rgba(26, 31, 113, 0.95) 60%,
+    rgba(26, 31, 113, 0.4) 0%,
+    rgba(26, 31, 113, 0.6) 30%,
+    rgba(26, 31, 113, 0.92) 60%,
     rgba(26, 31, 113, 0.98) 100%
   );
+  /* Smooth transition when video loads */
+  animation: overlayFadeIn 1.5s ease;
 }
 
-/* Vignette Effect for Depth */
+@keyframes overlayFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Vignette Effect - Enhanced for depth */
 .vignette {
   position: absolute;
   inset: 0;
   background: radial-gradient(
     ellipse at center,
     transparent 0%,
-    rgba(0, 0, 0, 0.2) 100%
+    transparent 40%,
+    rgba(0, 0, 0, 0.3) 100%
   );
   pointer-events: none;
 }
@@ -255,26 +295,28 @@
     gap: var(--space-4);
   }
 
+  /* Lighter overlay on larger screens to show more video */
   .overlay {
     background: linear-gradient(
       135deg,
-      rgba(26, 31, 113, 0.2) 0%,
-      rgba(26, 31, 113, 0.4) 35%,
-      rgba(26, 31, 113, 0.92) 55%,
-      rgba(26, 31, 113, 0.98) 100%
+      rgba(26, 31, 113, 0.3) 0%,
+      rgba(26, 31, 113, 0.5) 35%,
+      rgba(26, 31, 113, 0.88) 55%,
+      rgba(26, 31, 113, 0.96) 100%
     );
   }
 }
 
 @media (min-width: 1200px) {
+  /* Even lighter overlay on desktop - show more video */
   .overlay {
     background: linear-gradient(
       125deg,
       transparent 0%,
-      rgba(26, 31, 113, 0.3) 25%,
-      rgba(26, 31, 113, 0.85) 45%,
-      rgba(26, 31, 113, 0.95) 60%,
-      rgba(26, 31, 113, 0.98) 100%
+      rgba(26, 31, 113, 0.25) 25%,
+      rgba(26, 31, 113, 0.8) 45%,
+      rgba(26, 31, 113, 0.92) 60%,
+      rgba(26, 31, 113, 0.96) 100%
     );
   }
 
@@ -313,5 +355,41 @@
 
   .description {
     font-size: var(--text-lg);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .bgVideo {
+    animation: none;
+  }
+  
+  .label,
+  .title,
+  .description,
+  .features,
+  .reviews,
+  .ctaButtons {
+    animation: none;
+    opacity: 1;
+  }
+}
+
+/* Performance optimization for mobile */
+@media (max-width: 768px) {
+  /* Disable Ken Burns on mobile for better performance */
+  .bgVideo {
+    animation: none;
+  }
+  
+  /* Stronger overlay on mobile for better text readability */
+  .overlay {
+    background: linear-gradient(
+      135deg,
+      rgba(26, 31, 113, 0.5) 0%,
+      rgba(26, 31, 113, 0.7) 30%,
+      rgba(26, 31, 113, 0.95) 60%,
+      rgba(26, 31, 113, 0.98) 100%
+    );
   }
 }
