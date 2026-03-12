@@ -17,7 +17,7 @@ function Mike() {
         <div className="sign-off">-YOUR FRIEND, MIKE / OWNER & CEO</div>
 
         <div className="action-row">
-          <a href="/meet-the-team" className="btn">
+          <a href="/team" className="btn">
             Meet Our Team 
             <i className="btn-arrow">→</i>
           </a>

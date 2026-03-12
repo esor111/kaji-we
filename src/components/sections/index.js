@@ -11,4 +11,5 @@ export { default as Offers } from './Offers/Offers';
 export { default as Trusted } from './Trusted/Trusted';
 export { default as FAQ } from './FAQ/FAQ';
 export { default as Blog } from './Blog/Blog';
+export { default as Videos } from './Videos/Videos';
 export { default as Contact } from './Contact/Contact';

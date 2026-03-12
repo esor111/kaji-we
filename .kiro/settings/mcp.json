@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp",
+      "disabled": false,
+      "autoApprove": [
+        "list_projects",
+        "list_tables",
+        "apply_migration",
+        "get_project_url",
+        "get_publishable_keys",
+        "generate_typescript_types",
+        "execute_sql",
+        "get_advisors",
+        "get_project"
+      ],
+      "description": "Supabase MCP Server - Manage your Supabase projects, databases, and Edge Functions"
+    }
+  }
+}

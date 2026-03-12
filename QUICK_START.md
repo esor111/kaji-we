@@ -1,131 +1,129 @@
-# 🚀 Quick Start Guide
+# ⚡ Quick Start - Admin Panel with Supabase
 
-## ✅ What's Done
+## What You Have Now:
 
-1. **Language Toggle** - Working! Click "ने / EN" in header
-2. **Team Page** - Complete at `/team`
-3. **Translated Sections** - Hero, Services, HonestService
+✅ **Admin Panel** at `/admin` - Works on localhost!
+✅ **Email/Password Login** - Secure authentication
+✅ **Video Management** - Add YouTube videos
+✅ **Booking Management** - View contact form submissions
+✅ **Real Database** - Supabase (not just files)
 
-## 🎯 Test It Now
+## 🚀 Setup in 10 Minutes
 
+### 1. Create Supabase Project (2 min)
+- Go to https://supabase.com
+- Sign up with GitHub
+- Create new project: "waterproofing-nepal"
+- Choose Singapore region
+- Wait for project to be ready
+
+### 2. Get API Keys (1 min)
+- Settings → API
+- Copy **Project URL** and **anon public** key
+
+### 3. Add to Your Project (1 min)
+Edit `.env.local`:
+```env
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+```
+
+Restart dev server:
 ```bash
-# Already running at:
-http://localhost:5173
-
-# Test these:
-1. Click "ने / EN" button in header
-2. Watch text change in Hero section
-3. Visit http://localhost:5173/team
-4. Toggle language on team page
-```
-
-## 📝 Add Translation to Any Section
-
-### 1. Add to translations.json:
-```json
-// src/data/translations.json
-{
-  "ne": {
-    "yourSection": {
-      "title": "नेपाली शीर्षक"
-    }
-  },
-  "en": {
-    "yourSection": {
-      "title": "English Title"
-    }
-  }
-}
-```
-
-### 2. Use in component:
-```jsx
-import { useTranslation } from '../hooks/useTranslation';
-
-function YourSection() {
-  const { t } = useTranslation();
-  return <h2>{t('yourSection.title')}</h2>;
-}
-```
-
-## 🎨 Pages You Have
-
-- `/` - Home (Hero, Services, etc.)
-- `/team` - Team page (fully bilingual)
-- `/mike` - About page (needs decision)
-
-## ⚡ Quick Wins
-
-### Add WhatsApp Button:
-```jsx
-<a href="https://wa.me/9779864488561">
-  WhatsApp Us
-</a>
-```
-
-### Update Phone Number:
-Search for `9864488561` and replace everywhere
-
-### Add Real Images:
-Replace images in `/public/images/` folders
-
-## 📋 Priority To-Do
-
-1. **Translate Contact section** (30 min)
-2. **Translate FAQ section** (20 min)
-3. **Translate Footer** (15 min)
-4. **Add real content** (1-2 days)
-5. **Connect contact form** (1 hour)
-
-## 🔧 Useful Commands
-
-```bash
-# Dev server (already running)
 npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Lint code
-npm run lint
 ```
 
-## 📚 Documentation
+### 4. Create Database Tables (3 min)
+- Supabase → SQL Editor → New query
+- Copy SQL from `SUPABASE_SETUP.md` (Step 4)
+- Run it
 
-- `IMPLEMENTATION_SUMMARY.md` - What's been built
-- `LANGUAGE_IMPLEMENTATION.md` - How language system works
-- `CRITICAL_PAGES_PLAN.md` - What pages you need
-- `PROJECT_ANALYSIS.md` - Full project analysis
+### 5. Create Admin User (2 min)
+- Supabase → Authentication → Users
+- Add user with your email/password
+- ✓ Check "Auto Confirm User"
 
-## 🎯 Critical Path
+### 6. Login! (1 min)
+- Go to http://localhost:5173/admin
+- Login with your email/password
+- Start adding videos!
 
-1. ✅ Language system - DONE
-2. ✅ Team page - DONE
-3. ⏳ Finish translations - 2-3 hours
-4. ⏳ Real content - 1-2 days
-5. ⏳ Deploy - 30 minutes
+## 📍 Where is Everything?
 
-## 💡 Key Files
+### Admin Panel:
+**URL:** http://localhost:5173/admin
 
+**Features:**
+- Videos tab: Add/delete YouTube videos
+- Bookings tab: View contact form submissions
+
+### Contact Form:
+- On homepage: "Book Now" button
+- Saves to Supabase automatically
+- View submissions in admin panel
+
+### Videos Section:
+- On homepage: Between "About" and "FAQ"
+- Shows videos from Supabase
+- Click to play inline
+
+## 🎬 Add Your First Video
+
+1. Upload video to YouTube
+2. Copy video ID from URL (e.g., `dQw4w9WgXcQ`)
+3. Go to `/admin` → Videos → Add Video
+4. Fill in details and submit
+5. Video appears on homepage instantly!
+
+## 📊 View Bookings
+
+1. Go to `/admin` → Bookings tab
+2. See all contact form submissions
+3. Delete old ones if needed
+
+## 🌐 Deploy to Production
+
+### Push to GitHub:
+```bash
+git add .
+git commit -m "Add Supabase backend"
+git push
 ```
-src/
-├── contexts/
-│   └── LanguageContext.jsx      # Language state
-├── hooks/
-│   └── useTranslation.js        # Translation hook
-├── data/
-│   └── translations.json        # All text content
-├── components/
-│   └── common/
-│       └── LanguageToggle/      # Toggle button
-└── pages/
-    ├── Home.jsx                 # Landing page
-    └── Team.jsx                 # Team page
-```
+
+### Deploy on Netlify:
+1. Go to https://app.netlify.com
+2. Import your GitHub repo
+3. Add environment variables (same as .env.local)
+4. Deploy!
+
+Your admin will work at: `https://yoursite.netlify.app/admin`
+
+## 📚 Full Documentation
+
+- **SUPABASE_SETUP.md** - Complete setup guide with SQL and troubleshooting
+- **DOMAIN_DEPLOYMENT_GUIDE.md** - Deploy on your own domain
+- **ADMIN_SETUP_GUIDE.md** - Old Netlify CMS guide (ignore this)
+
+## 🆘 Troubleshooting
+
+### Can't login?
+- Did you create user in Supabase?
+- Did you check "Auto Confirm User"?
+- Did you restart dev server after adding .env.local?
+
+### Videos not showing?
+- Did you run the SQL to create tables?
+- Did you add videos in admin panel?
+- Check browser console (F12) for errors
+
+### Form not submitting?
+- Did you create bookings table?
+- Are API keys correct in .env.local?
+- Check browser console for errors
 
 ## 🎉 You're Ready!
 
-Language toggle is working. Test it, then start adding translations to remaining sections. You're 90% done!
+**Admin:** http://localhost:5173/admin
+**Website:** http://localhost:5173
+
+Start adding your real YouTube videos and watch bookings come in!

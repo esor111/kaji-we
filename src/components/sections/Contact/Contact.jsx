@@ -1,7 +1,10 @@
 import { Container, Button, Icon, BookingForm } from '../../common';
+import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './Contact.module.css';
 
 export default function Contact() {
+  const { t } = useTranslation();
+  
   return (
     <section id="contact" className={styles.section}>
       <div className={styles.background}>
@@ -12,23 +15,22 @@ export default function Contact() {
       <Container>
         <div className={styles.grid}>
           <div className={styles.content}>
-            <h2>तपाईंको घरको Waterproofing विशेषज्ञ</h2>
+            <h2>{t('contact.title')}</h2>
             <p className={styles.description}>
-              Free consultation को लागि आज नै सम्पर्क गर्नुहोस्। 
-              हामी तपाईंको समस्या बुझ्छौं र उत्तम समाधान दिन्छौं।
+              {t('contact.description')}
             </p>
             <div className={styles.features}>
               <div className={styles.feature}>
                 <Icon name="checkCircle" size={20} />
-                <span>Free Site Visit</span>
+                <span>{t('contact.freeSiteVisit')}</span>
               </div>
               <div className={styles.feature}>
                 <Icon name="checkCircle" size={20} />
-                <span>No Hidden Charges</span>
+                <span>{t('contact.noHiddenCharges')}</span>
               </div>
               <div className={styles.feature}>
                 <Icon name="checkCircle" size={20} />
-                <span>Warranty Available</span>
+                <span>{t('contact.warrantyAvailable')}</span>
               </div>
             </div>
           </div>

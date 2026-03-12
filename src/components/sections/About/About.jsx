@@ -1,23 +1,23 @@
+import { useTranslation } from '../../../hooks/useTranslation';
 import styles from './About.module.css';
 
 export default function About() {
+  const { t } = useTranslation();
+  
   return (
     <section id="about" className={styles.heroSection}>
       {/* Left Side - Blue Content */}
       <div className={styles.contentBox}>
-        <div className={styles.subHeader}>हाम्रो बारेमा</div>
-        <h2 className={styles.title}>विश्वसनीय सेवाको<br />इतिहास</h2>
+        <div className={styles.subHeader}>{t('about.label')}</div>
+        <h2 className={styles.title}>{t('about.title')}</h2>
         <p className={styles.description}>
-          "हामी कहीं जाँदैनौं। हाम्रो सुरुवात साना थियो, तर आज हामी Nepal को 
-          अग्रणी waterproofing कम्पनी बनेका छौं। Kathmandu, Lalitpur, Bhaktapur 
-          र वरपरका क्षेत्रहरूमा सेवा प्रदान गर्दै। जहाँ अरू कम्पनीहरू आउँछन् र जान्छन्, 
-          हामी यहीं छौं - तपाईंको घरको सुरक्षाको लागि।"
+          {t('about.description')}
         </p>
-        <div className={styles.signOff}>- तपाईंको साथी / FOUNDER</div>
+        <div className={styles.signOff}>{t('about.signOff')}</div>
 
         <div className={styles.actionRow}>
           <a href="#contact" className={styles.btn}>
-            सम्पर्क गर्नुहोस्
+            {t('about.contact')}
             <span className={styles.btnArrow}>→</span>
           </a>
         </div>

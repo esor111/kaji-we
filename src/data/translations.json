@@ -18,7 +18,39 @@
     },
     "honestService": {
       "title": "तपाईंको घरको सुरक्षाको लागि विश्वसनीय Waterproofing सेवा",
-      "description": "हामी विश्वास गर्छौं कि हरेक घरले उत्तम सुरक्षा पाउनु पर्छ। इमानदार मूल्य, गुणस्तरीय काम, र तपाईंको घरलाई आफ्नै जस्तो व्यवहार - यही हाम्रो प्रतिबद्धता हो। हाम्रो अनुभवी टोली तपाईंको सेवामा सधैं तत्पर छ।"
+      "description": "हामी विश्वास गर्छौं कि हरेक घरले उत्तम सुरक्षा पाउनु पर्छ। इमानदार मूल्य, गुणस्तरीय काम, र तपाईंको घरलाई आफ्नै जस्तो व्यवहार - यही हाम्रो प्रतिबद्धता हो। हाम्रो अनुभवी टोली तपाईंको सेवामा सधैं तत्पर छ।",
+      "button": "Appointment लिनुहोस्"
+    },
+    "contact": {
+      "title": "तपाईंको घरको Waterproofing विशेषज्ञ",
+      "description": "Free consultation को लागि आज नै सम्पर्क गर्नुहोस्। हामी तपाईंको समस्या बुझ्छौं र उत्तम समाधान दिन्छौं।",
+      "freeSiteVisit": "Free Site Visit",
+      "noHiddenCharges": "No Hidden Charges",
+      "warrantyAvailable": "Warranty Available"
+    },
+    "faq": {
+      "title": "बारम्बार सोधिने प्रश्नहरू",
+      "quote": "प्रश्न छ? हामी यहाँ छौं। हाम्रो टोली तपाईंको प्रश्नको जवाफ दिन र मार्गदर्शन प्रदान गर्न सधैं तयार छ।",
+      "contact": "सम्पर्क गर्नुहोस्"
+    },
+    "reviews": {
+      "label": "Reviews",
+      "title": "ग्राहक समीक्षा",
+      "writeReview": "समीक्षा दिनुहोस्",
+      "viewAll": "सबै समीक्षा हेर्नुहोस्"
+    },
+    "about": {
+      "label": "हाम्रो बारेमा",
+      "title": "विश्वसनीय सेवाको इतिहास",
+      "description": "हामी कहीं जाँदैनौं। हाम्रो सुरुवात साना थियो, तर आज हामी Nepal को अग्रणी waterproofing कम्पनी बनेका छौं। Kathmandu, Lalitpur, Bhaktapur र वरपरका क्षेत्रहरूमा सेवा प्रदान गर्दै। जहाँ अरू कम्पनीहरू आउँछन् र जान्छन्, हामी यहीं छौं - तपाईंको घरको सुरक्षाको लागि।",
+      "signOff": "- तपाईंको साथी / FOUNDER",
+      "contact": "सम्पर्क गर्नुहोस्"
+    },
+    "footer": {
+      "tagline": "Nepal को विश्वसनीय Waterproofing सेवा",
+      "copyright": "© 2024 Waterproofing Nepal. सर्वाधिकार सुरक्षित।",
+      "privacy": "Privacy",
+      "terms": "Terms"
     },
     "nav": {
       "services": "Services",
@@ -53,7 +85,39 @@
     },
     "honestService": {
       "title": "Trusted Waterproofing Service for Your Home's Protection",
-      "description": "We believe every home deserves the best protection. Honest pricing, quality work, and treating your home like our own - that's our commitment. Our experienced team is always ready to serve you."
+      "description": "We believe every home deserves the best protection. Honest pricing, quality work, and treating your home like our own - that's our commitment. Our experienced team is always ready to serve you.",
+      "button": "Book Appointment"
+    },
+    "contact": {
+      "title": "Your Home Waterproofing Experts",
+      "description": "Contact us today for a free consultation. We understand your problems and provide the best solutions.",
+      "freeSiteVisit": "Free Site Visit",
+      "noHiddenCharges": "No Hidden Charges",
+      "warrantyAvailable": "Warranty Available"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "quote": "Have questions? We're here. Our team is always ready to answer your questions and provide guidance.",
+      "contact": "Contact Us"
+    },
+    "reviews": {
+      "label": "Reviews",
+      "title": "Customer Reviews",
+      "writeReview": "Write a Review",
+      "viewAll": "View All Reviews"
+    },
+    "about": {
+      "label": "About Us",
+      "title": "A History of Dependable Service",
+      "description": "We're not going anywhere. From our humble beginnings, we've grown into Nepal's leading waterproofing company. Serving Kathmandu, Lalitpur, Bhaktapur and surrounding areas. While other companies come and go, we're still here - protecting your home.",
+      "signOff": "- YOUR FRIEND / FOUNDER",
+      "contact": "Contact Us"
+    },
+    "footer": {
+      "tagline": "Nepal's Trusted Waterproofing Service",
+      "copyright": "© 2024 Waterproofing Nepal. All rights reserved.",
+      "privacy": "Privacy",
+      "terms": "Terms"
     },
     "nav": {
       "services": "Services",

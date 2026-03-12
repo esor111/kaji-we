@@ -17,7 +17,7 @@ export default function HonestService() {
             <h2>{t('honestService.title')}</h2>
             <p>{t('honestService.description')}</p>
             <Button href="#contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
-              Appointment लिनुहोस्
+              {t('honestService.button')}
             </Button>
           </div>
         </div>

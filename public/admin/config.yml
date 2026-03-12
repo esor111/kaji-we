@@ -1,0 +1,108 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Local development
+local_backend: true
+
+media_folder: "public/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  # Blog Posts
+  - name: "blog"
+    label: "Blog Posts"
+    folder: "src/data/blog"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Excerpt", name: "excerpt", widget: "text"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Read Time", name: "readTime", widget: "string", default: "5 MIN READ"}
+      - {label: "Link", name: "link", widget: "string"}
+
+  # Customer Reviews
+  - name: "reviews"
+    label: "Customer Reviews"
+    folder: "src/data/reviews"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Customer Name", name: "name", widget: "string"}
+      - {label: "Review Text", name: "text", widget: "text"}
+      - {label: "Rating", name: "rating", widget: "number", min: 1, max: 5, default: 5}
+      - {label: "Source", name: "source", widget: "select", options: ["google", "facebook", "website"]}
+      - {label: "Avatar", name: "avatar", widget: "image"}
+
+  # Project Videos
+  - name: "videos"
+    label: "Project Videos"
+    folder: "src/data/videos"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "YouTube Video ID", name: "youtubeId", widget: "string", hint: "Just the ID from YouTube URL (e.g., dQw4w9WgXcQ)"}
+      - {label: "Thumbnail", name: "thumbnail", widget: "image", required: false, hint: "Optional - YouTube thumbnail will be used if not provided"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Project Type", name: "projectType", widget: "select", options: ["Basement", "Roof", "Wall", "Foundation", "Bathroom", "Other"]}
+      - {label: "Order", name: "order", widget: "number", default: 1}
+      - {label: "Featured", name: "featured", widget: "boolean", default: false}
+
+  # Team Members
+  - name: "team"
+    label: "Team Members"
+    folder: "src/data/team"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Name (Nepali)", name: "name", widget: "string"}
+      - {label: "Name (English)", name: "nameEn", widget: "string"}
+      - {label: "Role", name: "role", widget: "string"}
+      - {label: "Role (Nepali)", name: "roleNe", widget: "string"}
+      - {label: "Photo", name: "image", widget: "image"}
+      - {label: "Experience", name: "experience", widget: "string"}
+      - {label: "Experience (Nepali)", name: "experienceNe", widget: "string"}
+      - {label: "Order", name: "order", widget: "number", default: 1}
+
+  # Services
+  - name: "services"
+    label: "Services"
+    folder: "src/data/services"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Icon", name: "icon", widget: "string"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Link", name: "link", widget: "string", default: "#services"}
+
+  # FAQ
+  - name: "faq"
+    label: "FAQ"
+    folder: "src/data/faq"
+    create: true
+    slug: "{{slug}}"
+    extension: "json"
+    format: "json"
+    fields:
+      - {label: "ID", name: "id", widget: "number"}
+      - {label: "Question", name: "question", widget: "string"}
+      - {label: "Answer", name: "answer", widget: "text"}

@@ -63,19 +63,10 @@ export default function Header() {
             <Button href="#contact" variant="primary" icon={<Icon name="arrowRight" size={16} />}>
               Book Now
             </Button>
-            <button className={styles.searchBtn} aria-label="Search">
-              <Icon name="search" size={20} />
-            </button>
           </div>
 
           <div className={styles.mobileActions}>
             <LanguageToggle />
-            <button 
-              className={styles.mobileSearchBtn}
-              aria-label="Search"
-            >
-              <Icon name="search" size={22} />
-            </button>
             <button 
               className={styles.menuBtn}
               onClick={() => setIsMobileMenuOpen(true)}

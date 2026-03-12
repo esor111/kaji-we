@@ -7,10 +7,8 @@ import {
   Reviews,
   HonestService,
   About,
-  Offers,
-  Trusted,
+  Videos,
   FAQ,
-  Blog,
   Contact
 } from '../components/sections';
 
@@ -25,10 +23,8 @@ export default function Home() {
         <Reviews />
         <HonestService />
         <About />
-        <Offers />
-        <Trusted />
+        <Videos />
         <FAQ />
-        <Blog />
         <Contact />
       </main>
       <Footer />

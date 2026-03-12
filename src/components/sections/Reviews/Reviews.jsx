@@ -1,10 +1,12 @@
 import { useState } from 'react';
 import { Container, SectionHeader, Button, Icon } from '../../common';
+import { useTranslation } from '../../../hooks/useTranslation';
 import ReviewCard from './ReviewCard';
 import reviews from '../../../data/reviews.json';
 import styles from './Reviews.module.css';
 
 export default function Reviews() {
+  const { t } = useTranslation();
   const [currentIndex, setCurrentIndex] = useState(0);
   const reviewsPerPage = 3;
   const maxIndex = Math.max(0, reviews.length - reviewsPerPage);
@@ -29,16 +31,16 @@ export default function Reviews() {
       <Container>
         <div className={styles.header}>
           <SectionHeader
-            label="Reviews"
-            title="ग्राहक समीक्षा"
+            label={t('reviews.label')}
+            title={t('reviews.title')}
             light
           />
           <div className={styles.buttons}>
             <Button href="#contact" variant="secondary">
-              समीक्षा दिनुहोस्
+              {t('reviews.writeReview')}
             </Button>
             <Button href="#reviews" variant="outlineWhite">
-              सबै समीक्षा हेर्नुहोस्
+              {t('reviews.viewAll')}
             </Button>
           </div>
         </div>

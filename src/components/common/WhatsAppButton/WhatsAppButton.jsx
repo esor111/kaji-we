@@ -1,4 +1,3 @@
-import { Icon } from '../Icon/Icon';
 import styles from './WhatsAppButton.module.css';
 
 export default function WhatsAppButton({ phone = '9779864488561', message = 'Hello! I need waterproofing service.' }) {
