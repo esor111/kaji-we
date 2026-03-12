@@ -31,7 +31,7 @@ export default function Admin() {
         password,
       })
       if (error) throw error
-      alert('Logged in successfully!')
+      // Auth state change will automatically show dashboard
     } catch (error) {
       alert(error.message)
     }

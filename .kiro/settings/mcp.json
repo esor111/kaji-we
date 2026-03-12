@@ -13,9 +13,28 @@
         "generate_typescript_types",
         "execute_sql",
         "get_advisors",
-        "get_project"
+        "get_project",
+        "restore_project"
       ],
       "description": "Supabase MCP Server - Manage your Supabase projects, databases, and Edge Functions"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@playwright/mcp@latest"
+      ],
+      "autoApprove": [
+        "browser_navigate",
+        "browser_click",
+        "browser_snapshot",
+        "browser_fill_form",
+        "browser_select_option",
+        "browser_close",
+        "browser_handle_dialog",
+        "browser_take_screenshot",
+        "browser_run_code"
+      ]
     }
   }
 }
