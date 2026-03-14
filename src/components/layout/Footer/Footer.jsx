@@ -65,6 +65,8 @@ export default function Footer() {
             <a href="#privacy">Privacy</a>
             <span className={styles.dot}>·</span>
             <a href="#terms">Terms</a>
+            <span className={styles.dot}>·</span>
+            <a href="/admin">Admin</a>
           </div>
         </div>
       </Container>
