@@ -16,7 +16,7 @@ export default function MobileBottomBar() {
     <div className={`${styles.bar} ${isVisible ? styles.visible : ''}`}>
       {/* TikTok */}
       <a 
-        href="https://tiktok.com/@lorenzphac" 
+        href="https://tiktok.com/@kajighalekajighal" 
         target="_blank" 
         rel="noopener noreferrer"
         className={styles.item}
