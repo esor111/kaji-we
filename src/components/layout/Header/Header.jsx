@@ -31,7 +31,7 @@ export default function Header() {
       <Container>
         <div className={styles.inner}>
           <a href="/" className={styles.logo}>
-            <img src="/images/lorenz-logo.svg" alt="Lorenz Plumbing Heating & Air" />
+            <img src="/images/lorenz-logo.jpg" alt="Lorenz Plumbing Heating & Air" />
           </a>
 
           <nav className={styles.nav}>

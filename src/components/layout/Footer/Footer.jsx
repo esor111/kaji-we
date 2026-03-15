@@ -14,7 +14,7 @@ export default function Footer() {
         <div className={styles.main}>
           <div className={styles.brand}>
             <img 
-              src="/images/lorenz-logo-white.svg" 
+              src="/images/lorenz-logo.jpg" 
               alt="Waterproofing Nepal" 
               className={styles.logo} 
             />

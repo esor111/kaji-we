@@ -49,7 +49,7 @@ export default function MobileMenu({ isOpen, onClose, navigation }) {
         className={`${styles.menu} ${isOpen ? styles.open : ''}`}
       >
         <div className={styles.header}>
-          <img src="/images/lorenz-logo.svg" alt="Waterproofing Nepal" className={styles.logo} />
+          <img src="/images/lorenz-logo.jpg" alt="Waterproofing Nepal" className={styles.logo} />
           <button onClick={onClose} className={styles.closeBtn} aria-label="Close menu">
             <Icon name="close" size={28} />
           </button>
