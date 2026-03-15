@@ -137,6 +137,34 @@ function VideosManager() {
     }
   }
 
+  // Extract YouTube ID from URL
+  const extractYouTubeId = (input) => {
+    // If it's already just an ID (no slashes or special chars), return it
+    if (!/[\/\?=]/.test(input)) {
+      return input;
+    }
+
+    // Try to extract from various YouTube URL formats
+    const patterns = [
+      /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\?\/\s]+)/,
+      /youtube\.com\/watch\?.*v=([^&\?\/\s]+)/,
+    ];
+
+    for (const pattern of patterns) {
+      const match = input.match(pattern);
+      if (match && match[1]) {
+        return match[1];
+      }
+    }
+
+    return input; // Return as-is if no pattern matches
+  };
+
+  const handleYouTubeIdChange = (value) => {
+    const extractedId = extractYouTubeId(value);
+    setFormData({...formData, youtube_id: extractedId});
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
@@ -199,9 +227,9 @@ function VideosManager() {
           />
           <input
             type="text"
-            placeholder="YouTube Video ID (e.g., dQw4w9WgXcQ)"
+            placeholder="YouTube URL or Video ID (e.g., https://www.youtube.com/watch?v=dQw4w9WgXcQ)"
             value={formData.youtube_id}
-            onChange={(e) => setFormData({...formData, youtube_id: e.target.value})}
+            onChange={(e) => handleYouTubeIdChange(e.target.value)}
             required
           />
           <textarea
