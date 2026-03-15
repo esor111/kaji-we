@@ -4,7 +4,6 @@ import styles from './Footer.module.css';
 const socialLinks = [
   { name: 'facebook', href: 'https://www.facebook.com/share/1Gu47rY4zj/', label: 'Facebook' },
   { name: 'tiktok', href: 'https://tiktok.com/@kajighalekajighal', label: 'TikTok' },
-  { name: 'google', href: 'https://g.page/lorenzphac', label: 'Google' },
 ];
 
 export default function Footer() {
