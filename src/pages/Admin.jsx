@@ -83,14 +83,20 @@ export default function Admin() {
       </header>
 
       <div className="admin-tabs">
-        <button 
-          className={activeTab === 'videos' ? 'active' : ''} 
+        <button
+          className={activeTab === 'videos' ? 'active' : ''}
           onClick={() => setActiveTab('videos')}
         >
           Videos
         </button>
-        <button 
-          className={activeTab === 'bookings' ? 'active' : ''} 
+        <button
+          className={activeTab === 'gallery' ? 'active' : ''}
+          onClick={() => setActiveTab('gallery')}
+        >
+          Gallery
+        </button>
+        <button
+          className={activeTab === 'bookings' ? 'active' : ''}
           onClick={() => setActiveTab('bookings')}
         >
           Bookings
@@ -99,6 +105,7 @@ export default function Admin() {
 
       <div className="admin-content">
         {activeTab === 'videos' && <VideosManager />}
+        {activeTab === 'gallery' && <GalleryManager />}
         {activeTab === 'bookings' && <BookingsManager />}
       </div>
     </div>
@@ -278,6 +285,184 @@ function VideosManager() {
                 {video.featured && <span className="badge featured">Featured</span>}
               </div>
               <button onClick={() => handleDelete(video.id)} className="delete-btn">
+                Delete
+              </button>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  )
+}
+
+function GalleryManager() {
+  const [items, setItems] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [showForm, setShowForm] = useState(false)
+  const [formData, setFormData] = useState({
+    image_url: '',
+    before_url: '',
+    title_en: '',
+    title_ne: '',
+    description_en: '',
+    description_ne: '',
+    project_type: 'Basement',
+    location: '',
+    featured: false,
+  })
+
+  useEffect(() => {
+    fetchItems()
+  }, [])
+
+  const fetchItems = async () => {
+    try {
+      const { data, error } = await supabase
+        .from('gallery')
+        .select('*')
+        .order('created_at', { ascending: false })
+
+      if (error) throw error
+      setItems(data || [])
+    } catch (error) {
+      console.error('Error fetching gallery:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    try {
+      const payload = { ...formData }
+      if (!payload.before_url) delete payload.before_url
+      const { error } = await supabase.from('gallery').insert([payload])
+      if (error) throw error
+      alert('Gallery item added!')
+      setFormData({
+        image_url: '',
+        before_url: '',
+        title_en: '',
+        title_ne: '',
+        description_en: '',
+        description_ne: '',
+        project_type: 'Basement',
+        location: '',
+        featured: false,
+      })
+      setShowForm(false)
+      fetchItems()
+    } catch (error) {
+      alert('Error: ' + error.message)
+    }
+  }
+
+  const handleDelete = async (id) => {
+    if (!confirm('Delete this gallery item?')) return
+    try {
+      const { error } = await supabase.from('gallery').delete().eq('id', id)
+      if (error) throw error
+      fetchItems()
+    } catch (error) {
+      alert('Error: ' + error.message)
+    }
+  }
+
+  if (loading) return <div>Loading gallery...</div>
+
+  return (
+    <div className="videos-manager">
+      <div className="manager-header">
+        <h2>Project Gallery</h2>
+        <button onClick={() => setShowForm(!showForm)}>
+          {showForm ? 'Cancel' : 'Add Photo'}
+        </button>
+      </div>
+
+      {showForm && (
+        <form className="video-form" onSubmit={handleSubmit}>
+          <input
+            type="url"
+            placeholder="Image URL (e.g., /images/gallery/photo.jpg or https://...)"
+            value={formData.image_url}
+            onChange={(e) => setFormData({ ...formData, image_url: e.target.value })}
+            required
+          />
+          <input
+            type="url"
+            placeholder="Before Image URL (optional — enables Before/After slider)"
+            value={formData.before_url}
+            onChange={(e) => setFormData({ ...formData, before_url: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Title (English)"
+            value={formData.title_en}
+            onChange={(e) => setFormData({ ...formData, title_en: e.target.value })}
+            required
+          />
+          <input
+            type="text"
+            placeholder="Title (Nepali)"
+            value={formData.title_ne}
+            onChange={(e) => setFormData({ ...formData, title_ne: e.target.value })}
+          />
+          <textarea
+            placeholder="Description (English)"
+            value={formData.description_en}
+            onChange={(e) => setFormData({ ...formData, description_en: e.target.value })}
+          />
+          <textarea
+            placeholder="Description (Nepali)"
+            value={formData.description_ne}
+            onChange={(e) => setFormData({ ...formData, description_ne: e.target.value })}
+          />
+          <input
+            type="text"
+            placeholder="Location (e.g., Kathmandu)"
+            value={formData.location}
+            onChange={(e) => setFormData({ ...formData, location: e.target.value })}
+          />
+          <select
+            value={formData.project_type}
+            onChange={(e) => setFormData({ ...formData, project_type: e.target.value })}
+          >
+            <option value="Basement">Basement</option>
+            <option value="Roof">Roof</option>
+            <option value="Wall">Wall</option>
+            <option value="Foundation">Foundation</option>
+            <option value="Bathroom">Bathroom</option>
+            <option value="Terrace">Terrace</option>
+            <option value="Other">Other</option>
+          </select>
+          <label>
+            <input
+              type="checkbox"
+              checked={formData.featured}
+              onChange={(e) => setFormData({ ...formData, featured: e.target.checked })}
+            />
+            Featured
+          </label>
+          <button type="submit">Add Photo</button>
+        </form>
+      )}
+
+      <div className="videos-list">
+        {items.length === 0 ? (
+          <p>No gallery items yet. Add your first photo!</p>
+        ) : (
+          items.map((item) => (
+            <div key={item.id} className="video-item">
+              <img src={item.image_url} alt={item.title_en || 'Gallery item'} />
+              <div className="video-info">
+                <h3>{item.title_en}</h3>
+                <p>{item.description_en}</p>
+                <span className="badge">{item.project_type}</span>
+                {item.location && <span className="badge">{item.location}</span>}
+                {item.featured && <span className="badge featured">Featured</span>}
+                {item.before_url && <span className="badge">Before/After</span>}
+              </div>
+              <button onClick={() => handleDelete(item.id)} className="delete-btn">
                 Delete
               </button>
             </div>

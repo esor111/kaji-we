@@ -200,3 +200,6 @@ After creating admin user:
 ---
 
 **Dashboard Link:** https://supabase.com/dashboard/project/mnrusmljldbxlgtwchqc/auth/users
+
+
+vanancy componet for individual hotel

@@ -43,6 +43,10 @@
       ]
     },
     {
+      "label": "Gallery",
+      "href": "#gallery"
+    },
+    {
       "label": "Resources",
       "href": "#faq",
       "children": [

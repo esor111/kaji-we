@@ -1,0 +1,97 @@
+.wrap {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  max-height: 75vh;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  user-select: none;
+  touch-action: none;
+  cursor: col-resize;
+  background: #000;
+}
+
+.imageBase,
+.imageBefore {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.beforeWrap {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  will-change: width;
+}
+
+.divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.4);
+  transform: translateX(-1px);
+  pointer-events: none;
+}
+
+.handle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.labelBefore,
+.labelAfter {
+  position: absolute;
+  top: var(--space-4);
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: var(--font-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.labelBefore {
+  left: var(--space-4);
+}
+
+.labelAfter {
+  right: var(--space-4);
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    aspect-ratio: 4 / 3;
+    max-height: 60vh;
+  }
+  .handle {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -5,9 +5,9 @@ import {
   Services,
   Process,
   Reviews,
-  HonestService,
   About,
   Videos,
+  Gallery,
   FAQ,
   Contact
 } from '../components/sections';
@@ -21,9 +21,9 @@ export default function Home() {
         <Services />
         <Process />
         <Reviews />
-        <HonestService />
         <About />
         <Videos />
+        <Gallery />
         <FAQ />
         <Contact />
       </main>

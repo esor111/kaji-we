@@ -11,7 +11,7 @@ To find your exact URL:
 3. The URL is shown at the top
 
 ### Admin Panel
-**URL:** `https://[your-site-name].netlify.app/admin`
+**URL:** `https://[your-site-name].netlify.app/admin`Can you just figure out whether that's where this is running or not? If not around that 
 
 ---
 
